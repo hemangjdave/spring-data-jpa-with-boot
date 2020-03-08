@@ -1,16 +1,18 @@
 package com.techrevolution.jpawithhibernateindepth;
 
 import com.techrevolution.jpawithhibernateindepth.entity.Course;
+import com.techrevolution.jpawithhibernateindepth.entity.Passport;
 import com.techrevolution.jpawithhibernateindepth.repository.CourseRepository;
+import com.techrevolution.jpawithhibernateindepth.repository.StudentRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication
+//@SpringBootApplication
 @Slf4j
-public class JpaWithHibernateInDepthApplication implements CommandLineRunner {
+public class JpaWithHibernateInDepthApplication implements CommandLineRunner{
 
 	private final CourseRepository courseRepository;
 
@@ -18,6 +20,7 @@ public class JpaWithHibernateInDepthApplication implements CommandLineRunner {
 	public JpaWithHibernateInDepthApplication(CourseRepository courseRepository) {
 		this.courseRepository = courseRepository;
 	}
+
 
 	public static void main(String[] args) {
 		SpringApplication.run(JpaWithHibernateInDepthApplication.class, args);
@@ -37,5 +40,6 @@ public class JpaWithHibernateInDepthApplication implements CommandLineRunner {
 		));
 
 //		log.info("Deleting course with id:--10001 and status is:--{}", courseRepository.deleteByid(10001));
+
 	}
 }
